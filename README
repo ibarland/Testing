@@ -1,1 +1,19 @@
-JavaTea: A web-based tool for teaching beginning programmers to write good (unit) test cases.
+A series of test-commits to see how git works (and how its svn interface works).
+
+Workflow: 
+If you want to keep a centralized repo that everybody pushes/pulls, then git
+is like svn but with one extra step: after commit, you push.
+
+  - git pull       ; cvs update
+  - [make edits]
+  - git update     ; cvs update
+  - git commit -a -m msg     ; cvs commit
+  - git push       ; pushes from local repo to the central repo.
+
+(That's because all repos are equal; when you commit you are committing to
+your local repo.  While others could pull from *your* repo, more likely
+you'll want to push the changes in your repo to the centralized repo.
+The advantage this has is that when you're off-line, you can still do
+full commits.)
+
+WHen using the svn interface: commits *do* get checked in, but git doesn't always display the info: the web page doesn't mention the most recent version/commit, and even 'svn up' right after 'svn commit' acts like its getting changes (even though it's not?? -- maybe only admin files are changed)
